@@ -1,0 +1,70 @@
+[
+  {
+    "model": "catalog.product",
+    "pk": 11,
+    "fields": {
+      "name": "Апельсин",
+      "description": "Оранжевый сочный",
+      "image": "",
+      "category": 7,
+      "price": 100,
+      "created_at": "2025-02-08T12:26:18Z",
+      "updated_at": null
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 12,
+    "fields": {
+      "name": "Яблоко",
+      "description": "Ароматные, сочные",
+      "image": "",
+      "category": 7,
+      "price": 150,
+      "created_at": null,
+      "updated_at": null
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 13,
+    "fields": {
+      "name": "Морковь",
+      "description": "Оранжевый, сладкий корнеплод",
+      "image": "",
+      "category": 6,
+      "price": 35,
+      "created_at": null,
+      "updated_at": null
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 14,
+    "fields": {
+      "name": "Картофель",
+      "description": "содержит много крахмала",
+      "image": "",
+      "category": 6,
+      "price": 40,
+      "created_at": null,
+      "updated_at": null
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 6,
+    "fields": {
+      "name": "Овощи",
+      "description": "богаты клетчаткой"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 7,
+    "fields": {
+      "name": "Фрукты",
+      "description": "сладкие"
+    }
+  }
+]
