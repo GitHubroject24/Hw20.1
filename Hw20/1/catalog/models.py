@@ -37,12 +37,14 @@ class Product(models.Model):
         null=True,
         verbose_name="Дата создания записи в БД",
         help_text="Введите дату создания записи в БД",
+        auto_now_add=True,
     )
     updated_at = models.DateTimeField(
         blank=True,
         null=True,
         verbose_name="Дата обновления записи в БД",
         help_text="Введите дату обновления записи в БД",
+        auto_now=True,
     )
 
     class Meta:
