@@ -1,0 +1,26 @@
+{% extends 'catalog/home.html' %}
+{% load my_tags %}
+{% block content %}
+<div class="container">
+    <div class="row text-center">
+        <div class="col-5">
+            <div class="card mb-4 box-shadow">
+                <div class="card-header">
+                    <h1 class="card-title pricing-card-title">{{ object.title }} ({{ object.slug }})</h1>
+                    <img src="{{ object.photo | media_filter }}">
+                    <div class="card-body">
+                        <ul class="list-unstyled mt-3 mb-4 text-start m-3">
+                            <li>Описание:</li>
+                            <p max_length="10">{{ object.body }}</p>
+                        </ul>
+                        <a class="btn btn-lg btn-block btn-outline-primary" href="{% url 'blog:list' %}"
+                           role="button">Назад</a>
+                    </div>
+                    <div class="card-footer">
+                        Просмотры: {{ object.views_count }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}

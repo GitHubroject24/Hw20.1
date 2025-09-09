@@ -1,0 +1,39 @@
+{% extends 'catalog/home.html' %}
+{% load my_tags %}
+{% block content %}
+    <section class="text-center">
+            <div class="container">
+                <a class="btn btn-primary" href="{% url 'blog:create' %}" role="button">Добавить пост</a>
+            </div>
+    </section>
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row text-center">
+                {% for object in object_list %}
+                <div class="col-3">
+                    <div class="card mb-4 box-shadow">
+                        <div class="card-header">
+                           <h1 class="my-0 font-weight-normal">{{ object.title }}</h1>
+                        </div>
+                        <img src="{{ object.photo | media_filter }}">
+                        <div class="card-body">
+                            <h3 class="card-title pricing-card-title">{{ object.body }}</h3>
+                            <a class="btn btn-sm btn-outline-secondary" href="{% url 'blog:view' object.pk %}"
+                                >View</a>
+                            <a class="btn btn-sm btn-outline-secondary" href="{% url 'blog:edit' object.pk %}" type="button"
+                                >Edit</a>
+                            <a class="btn btn-sm btn-outline-danger" href="{% url 'blog:delete' object.pk %}" type="button"
+                                >Delete</a>
+                        </div>
+                        {% if object.is_published %}
+                            <a class="btn btn-warning" href="{% url 'blog:toggle_activity' object.pk %}">Не опубликовано</a>
+                        {% else %}
+                            <a class="btn btn-success" href="{% url 'blog:toggle_activity' object.pk %}">Опубликовано</a>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
