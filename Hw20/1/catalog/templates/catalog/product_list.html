@@ -1,8 +1,9 @@
-{% extends 'home.html' %}
+{% extends 'catalog/home.html' %}
 {% load my_tags %}
 {% block content %}
 <div class="container">
     <div class="row text-center">
+        {% for product in object_list %}
         <div class="col-3">
             <div class="card mb-4 box-shadow">
                 <div class="card-header">
@@ -11,14 +12,12 @@
                 <img src="{{ product.image | media_filter }}">
                 <div class="card-body">
                     <h1 class="card-title pricing-card-title">{{ product.price }} ₽</h1>
-                    <ul class="list-unstyled mt-3 mb-4 text-start m-3">
-                        <li>Описание:</li>
-                        <p max_length="10">{{ product.description | slice:10 }}</p>
                     </ul>
-                    <a class="btn btn-lg btn-block btn-outline-primary" href="{% url 'catalog:products_list' %}"
-                       role="button">Назад</a>
+                    <a class="btn btn-lg btn-block btn-outline-primary" href="{% url 'catalog:product_detail' product.pk %}"
+                       role="button">Купить</a>
                 </div>
             </div>
         </div>
+        {% endfor %}
     </div>
-{% endblock %}
+    {% endblock %}

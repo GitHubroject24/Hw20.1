@@ -512,6 +512,17 @@ files = [
 windows-terminal = ["colorama (>=0.4.6)"]
 
 [[package]]
+name = "pytils"
+version = "0.4.4"
+description = "Russian-specific string utils"
+optional = false
+python-versions = "*"
+files = [
+    {file = "pytils-0.4.4-py3-none-any.whl", hash = "sha256:e54c16465a5fdb65d414e2da8045e6cc6de79889acda6143dcef2e1e86a1a840"},
+    {file = "pytils-0.4.4.tar.gz", hash = "sha256:9992a96caad57daa211584df1da4fd825f11e836d3ed93011785f1d02ab6f0ca"},
+]
+
+[[package]]
 name = "sqlparse"
 version = "0.5.2"
 description = "A non-validating SQL parser."
@@ -585,4 +596,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "19c9c9e183ede4a985f2619cd8110ec5d0cdab1a53d6315fa3fbd49d62f1e13c"
+content-hash = "e73c88bc61dbed20b8febd8f8c2c37e1f20101757c1018850d0c48adbcab2a37"
